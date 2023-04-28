@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HOTEL GP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'main.css' %}">
+        <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+        <link rel = "icon" href ="{% static "images/logo.png" %}" type = "image/png">
+    </head>
+    <body>
+        <script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    const csrftoken = getCookie('csrftoken');
+</script>
+    <!-- header -->
+        <header class = "header" id = "header">
+            <div class = "head-top">
+                <div class = "site-name">
+                    <span>ABDURAXMON</span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>
+            </div>
+
+            <div class = "head-bottom flex">
+                <h2>YASHASH UCHUN YAXSHI VA QULAY JOY</h2>
+                <p>Toshkentga kelgan mehmonlar uchun uy topish va qidirsh.</p>
+                <button type = "button" class = "head-btn">Boshlash</button>
+            </div>
+        </header>
+        <!-- end of header -->
+
+        <!-- side navbar -->
+        <div class = "sidenav" id = "sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class = "fas fa-times"></i>
+            </span>
+
+            <ul class = "navbar">
+                <li><a href = "#header">home</a></li>
+                <li><a href = "#services">xizmatlar</a></li>
+                <li><a href = "#rooms">xonalar</a></li>
+                <li><a href = "#customers">xaridorlar</a></li>
+            </ul>
+            <button class = "btn sign-up">ro'yxatdan o'tish</button>
+            <button class = "btn log-in">tizimga kirish</button>
+        </div>
+        <!-- end of side navbar -->
+
+        <!-- fullscreen modal -->
+        <div id = "modal"></div>
+        <!-- end of fullscreen modal -->
+
+        <!-- body content  -->
+        <section class = "services sec-width" id = "services">
+            <div class = "title">
+                <h2>Xizmatlar</h2>
+            </div>
+            <div class = "services-container">
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-utensils"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Oziq-ovqat xizmati/Oziq-ovqat yetkazib berish</h2>
+                        <p>Oziq-ovqat yetkazib berish xizmatlari odatda onlayn yoki mobil ilova orqali buyurtma berishni va keyin oziq-ovqatni belgilangan joyga yetkazib berishni o'z ichiga oladi. Yetkazib berish toʻlovlari va minimal buyurtma miqdori qoʻllanilishi mumkin va baʼzi xizmatlar yetkazib berish haydovchisining joylashuvini real vaqtda kuzatish kabi qoʻshimcha funksiyalarni taklif qiladi.</p>
+                        <button type = "button" class = "btn">Ko'proq bilish</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-swimming-pool"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Suzish hovzasi</h2>
+                        <p>Hovuz mehmonxonasini bron qilishda basseyn soatlari, qoidalari va cheklovlarini tekshirish muhim. Ba'zi mehmonxonalar, ayniqsa, eng yuqori mavsumda yoki kunning band bo'lgan paytlarida hovuzga kirish imkoniyati cheklangan bo'lishi mumkin. Bundan tashqari, ba'zi mehmonxonalarda hovuzdan foydalanish uchun yosh cheklovlari bo'lishi mumkin yoki mehmonlardan ma'lum suzish kiyimlarini kiyishni talab qilinadi.
+
+                            Umuman olganda, suzish havzasi mehmonxonasi tasalli va yoqimli dam olishni qidirayotgan sayohatchilar uchun ajoyib imkoniyat bo'lishi mumkin.</p>
+                        <button type = "button" class = "btn">Ko'proq bilish</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-broom"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Uy xo'jaligi</h2>
+                        <p>Mehmonxona sanoati mehmonxonalar va dam olish maskanlaridan tortib restoranlar, barlar va kafelargacha bo'lgan keng doiradagi korxonalarni o'z ichiga oladi. Ushbu korxonalar ko'pincha mehmonxona muhit yaratishga va o'z mijozlariga yuqori sifatli xizmat ko'rsatishga intiladi. Bunga shaxsiy tavsiyalar berish, maxsus so'rovlarni qondirish va mehmonlarning ijobiy tajribaga ega bo'lishini ta'minlash uchun yuqorida va tashqaridan ko'rish kerak.</p>
+                        <button type = "button" class = "btn">Ko'proq bilish</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+                <!-- single service -->
+                <article class = "service">
+                    <div class = "service-icon">
+                        <span>
+                            <i class = "fas fa-door-closed"></i>
+                        </span>
+                    </div>
+                    <div class = "service-content">
+                        <h2>Xona xavfsizligi</h2>
+                        <p>Mehmonxonadagi xona xavfsizligi deganda mehmonxonada o'z xonalarida qoladigan mehmonlarning xavfsizligi va xavfsizligini ta'minlash uchun ko'riladigan chora-tadbirlar tushuniladi. Bu o'g'irlik, ruxsatsiz kirish va boshqa xavfsizlik tahdidlarini oldini olish uchun mo'ljallangan turli funksiya va tartiblarni o'z ichiga olishi kerak.</p>
+                        <button type = "button" class = "btn">Ko'proq bilish</button>
+                    </div>
+                </article>
+                <!-- end of single service -->
+            </div>
+        </section>
+
+        <div class = "book">
+            <form class = "book-form"  action="{%  url 'home' %}" method="post" >
+                {% csrf_token %}
+                <div class = "form-item">
+                    <label  for = "checkin-date">Ro'yxatdan o'tish sanasi: </label>
+                    <input type = "date" id = "chekin-date" name="date1">
+                </div>
+                <div class = "form-item">
+                    <label for = "checkout-date">Chiqish sanasi: </label>
+                    <input type = "date" id = "chekout-date" name="date2">
+                </div>
+                <div class = "form-item">
+                    <label for = "adult">Kattalar: </label>
+                    <input type = "number" min = "1" value = "1" id = "adult" name="adult">
+                </div>
+                <div class = "form-item">
+                    <label for = "children">Bolalar: </label>
+                    <input type = "number" min = "1" value = "1" id = "children" name="children">
+                </div>
+                <div class = "form-item">
+                    <label for = "rooms">Xonalar: </label>
+                    <input type = "number" min = "1" value = "1" id = "rooms" name="rooms">
+                </div>
+                <div class = "form-item">
+                    <input type = "submit" class = "btn" value = "Band qilish">
+                </div>
+            </form>
+        </div>
+
+        <section class = "rooms sec-width" id = "rooms">
+            <div class = "title">
+                <h2>Xonalar</h2>
+            </div>
+            <div class = "rooms-container">
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src ="{%  static   "images/img1.jpg"  %}" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Lux xonalar</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Kirish vaqti:</b> 8:00 dan 00:00 gacha
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Chiqish vaqti:</b> 08:00 dan - 12:00 gacha
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Uy hayvonlari:</b>Uy hayvonlariga ruxsat berilmaydi.
+                            </li>
+                        </ul>
+                        <p>Lux xonalarimiz tabiatning quvonchli va quyoshi osoyishta cheksiz osmon bilan uyg'unlashgan go'zal tabiiy landshaftida ulug'vor tog'lar orasida joylashgan.
+
+                            Panoramic Spa mehmonxonasi zamonaviy arxitekturasi, qulayligi va sifatli dizayni bilan dam olish uchun eng yaxshi joy.
+
+                            Mehmonlarni qoniqtirish va xizmat ko'rsatish sifati bizning ustuvor vazifamizdir! Sizning ixtiyoringizda 47 xona mavjud. Ushbu xonalar 23 ta standart, 12 ta biznes va 4 ta hashamatli xonalardan iborat.
+
+                            "Shefim" restoranida milliy taomlar bilan bir qatorda turk oshxonalari ham mavjud. Umumiy quvvati 120 kishini tashkil etadigan restoranimizda yuqori sifatli xizmat bilan birgalikda mazali taomlarni topishingiz mumkin.
+
+                            Bu yerda ochiq hovuz, 2 ta bar, fitnes zali, kinoteatr va kurort markazi mavjud.
+
+                            Mehmonxonamizda dam olish uchun siz izlayotgan barcha narsalarni topasiz, eng yaxshi oshpazlar va sizga hamma narsada xizmat ko'rsatishga tayyor xodimlar.
+
+                            Biz sizni mehmonxonamizda kutib olishdan mamnun bo'lamiz!</p>
+                        <p class = "rate" id="rate1">
+                            <span id="span-500">500 ming so'm /</span> Bir kechaga
+                        </p>
+                        <button onclick="showPopup('1')" type = "button" class = "btn">Band qilish</button>
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src ="{%  static  "images/img2.jpg"  %}"  alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Lux Xonalar</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Kirish vaqti:</b> 8:00 dan 00:00 gacha
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Chiqish vaqti:</b> 08:00 dan - 12:00 gacha
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Uy hayvonlari:</b>Uy hayvonlariga ruxsat berilmaydi.
+                            </li>
+                        </ul>
+                        <p>Hashamatli xonalar - bu mehmonlarga yuqori darajadagi qulayliklar, yuqori darajadagi mebellar va ajoyib xizmatni taqdim etadigan mehmonxona xonalari yoki turar joy. Bu xonalar mehmonlar uchun hashamatli va qulay tajribani ta'minlash uchun mo'ljallangan bo'lib, ko'pincha yuqori sifatli choyshablar, yuqori sifatli choyshablar va hashamatli hammom jihozlari bilan jihozlangan.</p>
+                        <p>Mehmonlar biznes yoki zavq uchun sayohat qilishdan qat'i nazar, ularning kutganidan oshib ketadigan hashamatli xonada chinakam zavqlanish tajribasidan bahramand bo'lishlari mumkin.</p>
+                        <p class = "rate">
+                            <span id="span-100">100$ /</span> 24 soat
+                        </p>
+                        <button onclick="showPopup('2')" type = "button" class = "btn">Band qilish</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src = "{%  static  "images/img3.jpg"  %}" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3>Lux Xonalar</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Kirish vaqti:</b> 8:00 dan 00:00 gacha
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Chiqish vaqti:</b> 08:00 dan - 12:00 gacha
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                <b>Uy hayvonlari:</b>Uy hayvonlariga ruxsat berilmaydi.
+                            </li>
+                        </ul>
+                        <p>5 yulduzli mehmonxona Hajmi: Odatda, hashamatli mehmonxona xonasi standart mehmonxona xonasidan kattaroq bo'lib, harakatlanish va dam olish uchun juda ko'p joy mavjud.
+
+                            To'shak: Yuqori sifatli choyshablar va yostiqlar bilan jihozlangan qulay shoh yoki malika to'shaklarini kutishingiz mumkin. Ba'zi mehmonxonalar sizning ideal uyqu tajribangiz uchun yostiq menyusidan tanlash imkoniyatini ham taklif qilishi mumkin.
+                        </p>
+                        <p>Imkoniyatlar: Hashamatli mehmonxona xonalari ko'pincha tekis ekranli televizor, yuqori tezlikdagi internet, seyf, mini-bar va qahva qaynatgich kabi bir qator qulayliklarga ega.
+
+                            Hammom: Keng va yaxshi jihozlangan hammomni katta vanna, alohida dush, yuqori sifatli hojatxona buyumlari, yumshoq sochiqlar, yumshoq xalat va shippaklar bilan kuting.
+
+                            Ko'rinish: Hashamatli mehmonxona xonalari ko'pincha shahar silueti, tog' tizmasi yoki okean bo'ladimi, atrofdagi hududning hayratlanarli manzaralariga ega.</p>
+                        <p class = "rate">
+                            <span id="span-200">200$ /</span> Kunlik
+                        </p>
+                        <button  onclick="showPopup('3')" type = "button" class = "btn">Band qilish</button>
+                    </div>
+                </article>
+                <!-- end of single room -->
+            </div>
+        </section>
+<script>
+function submitForm() {
+    // Retrieve the values from the form fields
+    var name = popup.document.getElementById("name").value;
+    var phone = popup.document.getElementById("phone").value;
+    console.log(name.phone)
+
+    // Do something with the values, e.g. send them to the server using fetch
+    fetch('/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({name: name, phone: phone,span:span})
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
+
+    // Close the popup window
+    popup.close();
+  }
+
+
+function showPopup(value) {
+    console.log(value)
+    word1 = document.getElementById(`span-500`)
+    word2 = document.getElementById(`span-100`)
+    word3 = document.getElementById(`span-200`)
+    if (value=='1'){
+        word=word1
+    }
+    if (value=='2'){
+        word=word2
+    }
+    if(value=='3'){
+        word=word3
+    }
+    var span=word.innerHTML;
+    console.log(span)
+  // Create a new window with the form
+  var popup = window.open("", "popup", "width=100%,height=auto");
+
+
+  // Write the HTML for the form to the new window
+  popup.document.write(`
+<style>
+.popup {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.popup input[type="text"] {
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.popup button[type="button"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.popup button[type="button"]:hover {
+  background-color: #3e8e41;
+}
+
+
+
+
+
+</style>
+    <div class="popup">
+      <h2>Enter your name and phone number</h2>
+      <form action='/submit' method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="phone">Phone number:</label>
+        <input type="text" id="phone" name="phone">
+        <p >${span}Bir kechaga</p>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+  `);
+
+  // Define a function to handle form submission
+
+}
+</script>
+
+        <section class = "customers" id = "customers">
+            <div class = "sec-width">
+                <div class = "title">
+                    <h2>XARIDORLAR</h2>
+                </div>
+                <div class = "customers-container">
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>Bizga yoqdi</h3>
+                        <p>Mehmonxona sharoitlari bizga yoqdi  sizlarga ham kelib dam olib ketishlaringizni tavsiya qilaman.</p>
+                        <img src ="{%  static  "images/cus1.jpg"  %}"  alt = "customer image">
+                        <span>Rayhon, O'zbekiston</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>нам понравилось</h3>
+                        <p>Нам понравились условия отеля, и я рекомендую вам приехать и отдохнуть</p>
+                        <img src ="{%  static  "images/cus2.jpg"  %}"  alt = "customer image">
+                        <span>Анастасия Россия</span>
+                    </div>
+                    <!-- end of single customer -->
+                    <!-- single customer -->
+                    <div class = "customer">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "far fa-star"></i></span>
+                        </div>
+                        <h3>We liked it</h3>
+                        <p>We liked the conditions of the hotel and I recommend you to come and relax.</p>
+                        <img src = "{%  static "images/cus3.jpg" %}" alt = "customer image">
+                        <span>John U.S</span>
+                    </div>
+                    <!-- end of single customer -->
+                </div>
+            </div>
+        </section>
+        <!-- end of body content -->
+        
+        <!-- footer -->
+        <footer class = "footer">
+            <div class = "footer-container">
+                <div>
+                    <h2>Biz haqimizda</h2>
+                    <p>Bizni  Twitter Facebook Instagram ijtimoiy tarmoqlarda kuzatishingiz mumkin. </p>
+                    <ul class = "social-icons">
+                        <li class = "flex">
+                            <i class = "fa fa-twitter fa-2x"></i>
+                        </li>
+                        <li class = "flex">
+                            <i class = "fa fa-facebook fa-2x"></i>
+                        </li>
+                        <li class = "flex">
+                            <i class = "fa fa-instagram fa-2x"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2>Foydali havolalar</h2>
+                    <a href = "#">Sahifa</a>
+                    <a href = "#">Xonalar</a>
+                    <a href = "#">Obuna</a>
+                    <a href = "#">Sovg'a kartasi</a>
+                </div>
+
+                <div>
+                    <h2>Maxfiylik</h2>
+                    <a href = "#">Karyera</a>
+                    <a href = "#">Biz haqimizda</a>
+                    <a href = "#">Biz bilan aloqa</a>
+                    <a href = "#">Xizmatlar</a>
+                </div>
+
+                <div>
+                    <h2>Joylashuv</h2>
+                    <div class = "contact-item">
+                        <span>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d972.0049665989577!2d67.3006096891533!3d37.239466568932635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f352df5e28e5027%3A0xddb26ce564a5bfe0!2z0KDQtdGB0YLQvtGA0LDQvSDQmtCw0LzQvtC70LHQtdC6!5e0!3m2!1sru!2s!4v1681145429230!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <i class = "fas fa-map-marker-alt"></i>
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+        
+        <script src="{% static "script.js" %}"></script>
+    </body>
+</html>
